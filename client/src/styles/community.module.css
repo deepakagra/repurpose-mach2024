@@ -1,0 +1,27 @@
+.mainContainer{
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.communityContainer{
+    width: 90vw;
+    text-align: center;
+}
+
+.aboutCommunity{
+    font-size: 40px;
+    font-weight: bold;
+}
+.communityContainer>img{
+    border-radius: 10px;
+
+}
+.communityDescription{
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 25px;
+    text-align:justify;
+}

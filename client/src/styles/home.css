@@ -17,49 +17,6 @@
   color: black;
   font-size: 22px;
 }
-.d-flex {
-  display: flex !important;
-}
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.secondary-nav,
-.secondary-nav p {
-    line-height: 2.5em;
- }
-.secondary-nav li {
-    padding-right: 10px;
-    list-style: none;
-}
-.secondary-nav li:last-child {
-    padding-right: 0;
-}
-.secondary-nav a {
-    color: var(--accent-color);
-}
-.secondary-nav a:hover {
-    color: var(--dark-color);
-}
-.secondary-nav ul,
-.secondary-nav li,
-.secondary-nav p {
-    margin-bottom: 0;
-}
-.container {
-  width: 96%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.justify-content-end {
-  -ms-flex-pack: justify !important;
-  justify-content: end !important;
-}
-.col-md-4 {
-  width: 33.33333333%;
-}
 .homepage-header div {
   width: 50%;
   height: 100%;
@@ -101,50 +58,7 @@
   align-items: center;
 }
  
-.main-banner {
-  position: relative;
-}
- 
-.main-banner img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
- 
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  text-align: right;
-  color: rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
- 
-.text-overlay button {
-  width: 25%;
-  padding: 10px 20px;
-  margin-top: 5px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
- 
-.text-overlay button:hover {
-  background-color: #3f6a97;
-}
- 
-.text-overlay h2,
-.text-overlay h4 {
-  margin: 5px 0px;
-}
- 
- 
+/* styles for hero banner */
 .heroBanner div {
   padding: 10px;
   display: flex;
@@ -167,9 +81,15 @@
   font-size: 20px;
 }
  
+/* styles for community banner */
+.communitySection{
+  padding: 10px 0px;
+}
 .communitySection img {
-  width: 60%;
+  width: 60vw;
   height: 80vh;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
  
 .communitySection div {
@@ -187,11 +107,42 @@
   text-justify: auto;
   font-size: 20px;
 }
+.communitySection button {
+  margin: 10px 0px 0px 10px;
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+ 
+.communitySection button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+};
+ 
+.communitySection button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+};
  
  
+ /* styles for donate banner */
+
+ .donateBanner{
+  margin-bottom: 20px;
+ }
+
 .donateBanner img {
-  width: 60%;
-  height: 40%;
+  width: 60vw;
+  height: 80vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
  
 .donateBanner div {
@@ -210,110 +161,12 @@
   font-size: 20px;
 }
  
-.contact-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- 
-.contact-section img {
-  width: 50%;
-  height: 100%;
-}
- 
-.contact-form-container {
-  width: 50%;
-  height: 100%;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
- 
-.contact-form-container h2 {
-  margin-bottom: 3px;
-  padding: 5px;
-}
- 
-.contact-form {
-  padding-left: 10px;
-}
- 
-.contact-form .form-group {
-  margin-bottom: 3px;
-}
- 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 95%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
- 
-.contact-form textarea {
-  resize: vertical;
-}
- 
-.contact-form button {
-  display: inline-block;
-  width: 97%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  justify-self: end;
-}
- 
-.contact-form button:hover {
-  background-color: #0056b3;
-}
- 
 .footer-container {
+  margin-top: 10px;
   width: 100%;
   background-color: rgb(48, 48, 48);
   color: aliceblue;
 }
- 
-.footer-container h4,
-.footer-container ul,
-.footer-container p,
-.footer-container li {
-  padding: 0%;
-  margin: 0%;
-}
- 
-.footer-container .social-media,
-.footer-container .payment-gateways {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  padding: 10px;
-}
- 
-.social-media .social-icons,
-.payment-gateways .payment-icons {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
- 
-.social-icons li i,
-.payment-icons li i {
-  color: #fff;
-  font-size: 20px;
-}
- 
-.social-icons li i:hover,
-.payment-icons li i:hover {
-  color: #0056b3;
-}
- 
 .footer-container .copyright {
   text-align: center;
   padding: 10px;

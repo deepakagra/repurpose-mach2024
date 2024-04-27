@@ -1,0 +1,25 @@
+.mainContainer{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUsContainer{
+    width: 700px;
+    text-align: center;
+}
+
+.aboutUs{
+    font-size: 40px;
+    font-weight: bold;
+}
+.aboutusImage{
+    width: 60vw;
+}
+.aboutUsDescription{
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 25px;
+    text-align:justify;
+}

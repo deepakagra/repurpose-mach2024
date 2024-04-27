@@ -1,21 +1,22 @@
 import "../styles/home.css";
 import { useEffect, useState } from "react";
 import * as Contentstack from "contentstack";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {  useNavigate } from "react-router-dom";
 import Header from "./Header";
- 
+
 const Home = () => {
+  const navigate = useNavigate();
+
   const stack = Contentstack.Stack(
     "blta9eaaf90aa1f0b99",
     "cs75ac97f792cd9581f678aaea",
     "website"
   );
- 
+
   const [donateBanner, setdonateBanner] = useState([]);
   const [heroBanner, setHeroBanner] = useState([]);
   const [communityBanner, setCommunityBanner] = useState([]);
- 
+
   useEffect(() => {
     const getAllEntries = async () => {
       try {
@@ -68,21 +69,20 @@ const Home = () => {
         console.error("Error fetching entries:", error);
       }
     };
- 
+
     getAllEntries();
   }, []);
- 
-  console.log("herobanner", heroBanner);
- 
-  // const heroBannerTitle = heroBanner[0].title
-  // const heroBannerDescription = heroBanner[0].description
-  // const heroBannerImage = heroBanner[0].image.url
- 
+
+  const handleClick = () => {
+    navigate("/repurpose/community");
+  };
+
   return (
     <div className="homePage">
       <Header />
- 
+
       <main>
+        {/* hero banner */}
         {heroBanner.length > 0 && (
           <section className="heroBanner">
             <div
@@ -103,16 +103,18 @@ const Home = () => {
             {/* <img src={heroBanner[0].image.url} alt="Poster" /> */}
           </section>
         )}
- 
+        {/* community banner */}
         {communityBanner.length > 0 && (
           <section className="communitySection">
             <img src={communityBanner[0].image.url} alt="Poster" />
             <div>
               <h1>{communityBanner[0].title}</h1>
               <p>{communityBanner[0].description}</p>
+              <button onClick={handleClick}>Learn More</button>
             </div>
           </section>
         )}
+        {/* donate banner */}
         {donateBanner.length > 0 && (
           <section className="donateBanner">
             <div>
@@ -123,10 +125,9 @@ const Home = () => {
           </section>
         )}
       </main>
- 
+
       <footer>
         <div className="footer-container">
-         
           <div className="copyright">
             <p>&copy; 2024 Repurpose. All rights reserved.</p>
           </div>
@@ -135,5 +136,5 @@ const Home = () => {
     </div>
   );
 };
- 
+
 export default Home;
