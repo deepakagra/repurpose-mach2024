@@ -13,7 +13,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password }); // Adjust the URL if needed
+      const response = await axios.post('https://repurpose-server.vercel.app/login', { email, password }); // Adjust the URL if needed
       const data = response.data;
       console.log(data)
       setMessage(data.message);

@@ -23,7 +23,7 @@ const navigate = useNavigate()
     // Add your form submission logic here
     console.log('Form data:', formData);
     try {
-      const response = await axios.post('http://localhost:5000/customers', formData ); // Adjust the URL if needed
+      const response = await axios.post('https://repurpose-server.vercel.app/customers', formData ); // Adjust the URL if needed
       const data = response.data;
       if(data.success){
         navigate("/login")
