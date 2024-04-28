@@ -141,6 +141,7 @@
 }
 
 @media screen and (min-width: 740px) {
+
   .search-panel {
     width: 100%;
     display: flex;
@@ -186,5 +187,8 @@
 
   .search-panel_item .variants div:hover {
     transform: scale(1.05);
+  }
+  .search-panel__filters{
+    display: none;
   }
 }

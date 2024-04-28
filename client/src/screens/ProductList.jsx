@@ -56,7 +56,7 @@ function ProductList() {
           <div className="search-panel__filters">
             <h4>Filter Based on Choice</h4>
             
-            <div>
+            <div >
               <p>Size</p>
               <RefinementList
                 className="refinementlist-style count-button"

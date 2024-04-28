@@ -4,53 +4,6 @@
   margin: 0%;
 }
  
-.homepage-header {
-  height: 80px;
-  /* background-color: rgb(126, 126, 126); */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
- 
-.homepage-header a {
-  text-decoration: none;
-  color: black;
-  font-size: 22px;
-}
-.homepage-header div {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
- 
-.homepage-header .header-logo {
-  margin-left: 20px;
-}
- 
-.homepage-header .header-icons {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.header-logo img {
-  width:50px;
-  height:50px
-}
-.header-icons div {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- 
-.header-icons div:hover {
-  background-color: rgb(253, 181, 152);
-}
- 
 .homePage section {
   width: 100%;
   display: flex;
@@ -60,6 +13,7 @@
  
 /* styles for hero banner */
 .heroBanner div {
+  height: 100vh;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -170,5 +124,39 @@
 .footer-container .copyright {
   text-align: center;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for screens up to 600px wide (typically mobile screens) */
+
+  /* for hero banner */
+
+  .heroBanner_Text{
+    width: 80%;
+  }
+  .heroBanner div{
+    height: 350px;
+  }
+  .heroBanner div h1{
+    font-size: 25px;
+  }
+  .heroBanner div p {
+    font-size: 16px;
+  }
+  /* for community banner */
+  .communitySection img{
+    display: none;
+
+  }
+  .communitySection div h1{
+    font-size: 25px;
+  }
+  /* for donate banner */
+  .donateBanner img{
+    display: none;
+  }
+  .donateBanner div h1{
+    font-size: 25px;
+  }
 }
  

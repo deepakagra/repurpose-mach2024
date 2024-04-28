@@ -1,7 +1,7 @@
 import "../styles/home.css";
 import { useEffect, useState } from "react";
 import * as Contentstack from "contentstack";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 
 const Home = () => {
@@ -88,7 +88,6 @@ const Home = () => {
             <div
               style={{
                 width: "100%",
-                height: "100vh",
                 backgroundImage: `url(${heroBanner[0].image.url})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",

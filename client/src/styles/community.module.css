@@ -25,3 +25,13 @@
     line-height: 25px;
     text-align:justify;
 }
+
+@media only screen and (max-width: 600px) {
+    .mainContainer{
+        width: 100%;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+    }
+}

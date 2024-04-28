@@ -1,4 +1,4 @@
-import "../styles/home.css";
+import "../styles/header.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -7,20 +7,30 @@ const Header = () => {
     localStorage.getItem("customer")
   );
 
+  const [isActive, setIsActive] = useState(true);
+
   const handleLogout = () => {
     localStorage.removeItem("customer");
     setIsLoggedIn(false);
   };
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
 
   return (
     <header className="homepage-header">
-      <div className="header-logo">
+      <div className="header-logo" onClick={() => (window.location.href = "/")}>
         <img src="../../images.png" alt="" />
         <a href="/">
           RePurpose <br />
         </a>
       </div>
-      <div className="header-icons">
+      {/* Hamburger menu icon
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <div className={`hamburger ${isActive ? "active" : ""}`}></div>
+      </div> */}
+
+      <div className={`header-icons ${isActive ? "active" : ""}`}>
         {/* Buy link */}
         <div>
           <Link to="/product-list">Buy</Link>
@@ -45,6 +55,9 @@ const Header = () => {
               <Link to="/login">Login/SignUp</Link>
             </div>
           )}
+        </div>
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <div className="hamburger"></div>
         </div>
       </div>
     </header>
